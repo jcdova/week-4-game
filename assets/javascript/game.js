@@ -40,25 +40,25 @@ $("#rdmNumber").load("load", function() {
 $("#rdmRed").load("load", function() {
 	rdmRCrystal = Math.floor((Math.random() * 12) + 1);    
     $("#rdmRedbelow").html("<h1>" + rdmRCrystal + "</h1>");
-    //$("#rdmRedbelow").hide();
+    $("#rdmRedbelow").hide();
 });
 
 $("#rdmBlue").load("load", function() {
 	rdmBCrystal = Math.floor((Math.random() * 12) + 1);   
     $("#rdmBluebelow").html("<h1>" + rdmBCrystal + "</h1>");
-   	//$("#rdmBluebelow").hide();
+   	$("#rdmBluebelow").hide();
 });
 
 $("#rdmYellow").load("load", function() {
 	rdmYCrystal = Math.floor((Math.random() * 12) + 1);    
     $("#rdmYellowbelow").html("<h1>" + rdmYCrystal + "</h1>");
-    //$("#rdmYellowbelow").hide();
+    $("#rdmYellowbelow").hide();
 });
 
 $("#rdmGreen").load("load", function() {
 	rdmGCrystal = Math.floor((Math.random() * 12) + 1);    
     $("#rdmGreenbelow").html("<h1>" + rdmGCrystal + "</h1>");
-    //$("#rdmGreenbelow").hide();
+    $("#rdmGreenbelow").hide();
 });
 
 
@@ -69,37 +69,38 @@ $("#rdmGreen").load("load", function() {
 $("#rdmRed").on("click", function() {
 	scoreAdder = scoreAdder + rdmRCrystal;    
     $("#totalScore").html("<h1>" + scoreAdder + "</h1>");  
-    roundComplete ();    
+    roundComplete();    
 });
 
 $("#rdmBlue").on("click", function() {
 	scoreAdder = scoreAdder + rdmBCrystal;    
     $("#totalScore").html("<h1>" + scoreAdder + "</h1>");
-    roundComplete ();                   
+    roundComplete();                   
 });
 
 $("#rdmYellow").on("click", function() {
 	scoreAdder = scoreAdder + rdmYCrystal;    
     $("#totalScore").html("<h1>" + scoreAdder + "</h1>");
-    roundComplete ();                    
+    roundComplete();                    
 });
 
 $("#rdmGreen").on("click", function() {
 	scoreAdder = scoreAdder + rdmGCrystal;    
     $("#totalScore").html("<h1>" + scoreAdder + "</h1>");
-    roundComplete ();                   
+    roundComplete();                   
 });
 
 
 
 //functions
 //player wins if the total score = random number
-function roundComplete () {
+function roundComplete() {
 	if (scoreAdder === rdmNum) {
 		// alert("Player Wins!")
 		totalWins++;
 		$("#totWins").html("<p>" + "Wins: " + totalWins + "</p>");
 		randomReset();
+		
 		
 
 	};
@@ -123,7 +124,30 @@ function randomReset() {
 	$("#rdmNumber").html("<h1>" + rdmNum + "</h1>")              
 });
 
- 
+$("#rdmRed").load("load", function() {
+	rdmRCrystal = Math.floor((Math.random() * 12) + 1);    
+    $("#rdmRedbelow").html("<h1>" + rdmRCrystal + "</h1>");
+    $("#rdmRedbelow").hide();
+});
+
+$("#rdmBlue").load("load", function() {
+	rdmBCrystal = Math.floor((Math.random() * 12) + 1);   
+    $("#rdmBluebelow").html("<h1>" + rdmBCrystal + "</h1>");
+   	$("#rdmBluebelow").hide();
+});
+
+$("#rdmYellow").load("load", function() {
+	rdmYCrystal = Math.floor((Math.random() * 12) + 1);    
+    $("#rdmYellowbelow").html("<h1>" + rdmYCrystal + "</h1>");
+    $("#rdmYellowbelow").hide();
+});
+
+$("#rdmGreen").load("load", function() {
+	rdmGCrystal = Math.floor((Math.random() * 12) + 1);    
+    $("#rdmGreenbelow").html("<h1>" + rdmGCrystal + "</h1>");
+    $("#rdmGreenbelow").hide();
+});
+
 
 };
 
