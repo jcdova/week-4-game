@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Crystals Collector Game</title>
+
+    <!-- Added link to the jQuery Library -->
+    <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+
+    <!-- Added a link to Bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+<style>
+body {
+    font-family: "Arial", sans-serif;
+    font-size: 16px;
+    background-image: url("assets/images/greenbg.jpg")    
+    }
+
+.container {
+        width: 60%;       
+}    
+
+h1 {
+    font-weight: bold;
+}
+
+#instructions {
+    padding-top: 10px;
+    margin-bottom: 10px;
+    color: darkgreen;
+    font-weight: bold;
+}
+
+.textBox1 {
+    padding-top: 2px;
+    float: left;
+    width: 300px;
+    height: 100px;
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px; 
+    padding-left: 4px;     
+}
+
+.textBox2 {
+    float: left;
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    padding: 2px;      
+}
+
+.textBox3 {
+    width: 300px;
+    height: 30px;
+    margin-top: 20px
+    margin-right: 10px
+    margin-bottom 10px;
+    padding-left: 4px;    
+}
+
+.btn-group {
+    margin-bottom: 10px;
+}
+
+img {
+    width: 100px;
+    height: 100px;
+}
+
+button {
+    margin: 0 10px;
+}
+
+</style>
+
+</head>
+<body>
+
+<div class="container">
+    <div class="Jumbotron">
+        <h1 class="text-center" style="background-color:darkorange; color: white;">CrystalsCollector!"</h1>
+
+        <div id="instructions" style="background-color:#f3e274">
+            <p>You will be given a random number at the start of the game.</p><br>
+            <p>There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score.</p><br>
+            <p>You win the game by matching your total score to the random number.</p><br>
+            <p>You lose the game if your total score goes above the random number.</p><br>
+            <p>The value of each crystal is hidden from you until you click on it.</p><br>
+            <p>Each time when the game starts, the game will change the values of each crystal.</p><br>
+        </div>
+
+        <div>
+            <div style="background-color:green" class="textBox1">
+                <h1 id="rdmNumber"><h1>
+            </div>
+        
+            <div style="background-color:lightblue" class="textBox2">
+                <p id="totWins">Wins:</p>
+                <p id="totLosses">Losses:</p>
+            </div>
+        </div>
+       
+            <div class="btn-group">
+                <button id="rdmRed" type="button" class="btn btn-default"><img src="assets/images/redcrystal.jpg" alt="red crystal"></button>
+                <button id="rdmBlue" type="button" class="btn btn-default"><img src="assets/images/bluecrystal.jpg" alt="blue crystal"></button>
+                <button id="rdmYellow" type="button" class="btn btn-default"><img src="assets/images/yellowcrystal.jpg" alt="yellow crystal"></button>
+                <button id="rdmGreen" type="button" class="btn btn-default"><img src="assets/images/greencrystal.jpg" alt="green crystal"></button>
+            </div>
+
+            <div class="btn-group">
+                <button id="rdmRedbelow" type="button" class="btn btn-default"></button>
+                <button id="rdmBluebelow" type="button" class="btn btn-default"></button>
+                <button id="rdmYellowbelow" type="button" class="btn btn-default"></button>
+                <button id="rdmGreenbelow" type="button" class="btn btn-default"></button>
+            </div>
+       
+        <div style="color:white">
+            <p style="background-color:darkgreen" class="textBox3">Your total score is:</p>
+            <h1 id="totalScore" class="textBox1" id="totalScore" style="background-color:darkgreen"></h1>
+       </div>
+
+    </div>
+</div>
+
+<script src="assets/javascript/game.js"></script>
+
+</body>
+</html>
